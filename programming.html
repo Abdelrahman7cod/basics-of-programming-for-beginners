@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+
+    @charset "UTF-8";
+    @import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+    * {
+      box-sizing: border-box;
+    }
+    
+    
+        body {
+        font-size: 62.5%; /* Sets base font size */
+      }
+      
+      .container {
+        width: 80%; /* 80% of the viewport width */
+        margin: 0 auto; /* Centers the container horizontally */
+      }
+      
+      h1 {
+        font-size: 2.5rem; /* Adjusts font size based on base */
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+      }
+      
+      /* Styles for screens less than 768px wide (most phones) */
+      @media only screen and (max-width: 768px) {
+        body {
+          font-size: 14px; /* Smaller font size for better readability */
+        }
+      
+        .container {
+          width: 90%; /* Increase container width for better use of space */
+        }
+      
+        h1 {
+          font-size: 1.8rem; /* Adjust heading size for smaller screens */
+        }
+      }
+      
+      
+      img {
+        max-width: 100%; /* Scales down large images to fit the container */
+      }
+       </style>
+        <style>
+          @import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+      
+          * {
+            box-sizing: border-box;
+          }
+      
+          body {
+            font-family: Merriweather, serif;
+          }
+      
+          .wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+          }
+      
+          label,
+          main {
+            color: var(--text, black);
+          }
+      
+          .theme-switch__input:checked~main,
+          .theme-switch__input:checked~label {
+            --text: white;
+          }
+      
+          main {
+            --gradDark: hsl(0, 0%, 46%);
+            --gradLight: hsl(0, 0%, 50%);
+            background: linear-gradient(to bottom,
+                var(--gradDark),
+                var(--gradLight));
+            padding: 120px 40px 40px 40px;
+            min-height: 100vh;
+            text-align: center;
+          }
+      
+          .theme-switch__input:checked~main {
+            --gradDark: hsl(198, 44%, 11%);
+            --gradLight: hsl(198, 39%, 29%);
+          }
+      
+          .theme-switch__input:checked~.theme-switch__label {
+            background-color: lightSlateGray;
+          }
+      
+          .theme-switch__input,
+          .theme-switch__label {
+            
+            z-index: 1;
+          }
+      
+          .theme-switch__input {
+            opacity: 0;
+          }
+      
+          .theme-switch__input:hover+.theme-switch__label,
+          .theme-switch__input:focus+.theme-switch__label {
+            background-color: lightSlateGray;
+          }
+      
+          .theme-switch__input:hover+.theme-switch__label span::after,
+          .theme-switch__input:focus+.theme-switch__label span::after {
+            background-color: #d4ebf2;
+          }
+      
+          .theme-switch__label {
+           
+          
+            width: 120px;
+            height: 50px;
+            border-radius: 50px;
+            text-align: left;
+          
+          }
+      
+          .theme-switch__label span {
+            position: absolute;
+            bottom: calc(100% + 10px);
+            left: 0;
+            width: 100%;
+          }
+      
+          .theme-switch__label::before,
+          .theme-switch__label::after {
+            font-size: 1rem;
+           
+            
+          }
+      
+          .theme-switch__label::before {
+            content: "☼";
+            right: 100%;
+            margin-right: 10px;
+            color: orange;
+          }
+      
+          .theme-switch__label::after {
+            content: "☾";
+            left: 100%;
+            margin-left: 10px;
+            color: lightSlateGray;
+          }
+      
+          .theme-switch__label span::after {
+            position: absolute;
+            top: calc(100% + 15px);
+            left: 5px;
+            width: 40px;
+            height: 40px;
+            content: "";
+            border-radius: 50%;
+            background-color: lightBlue;
+            transition: transform 200ms, background-color 200ms;
+            box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.4);
+          }
+      
+          .theme-switch__input:checked~.theme-switch__label span::after {
+            transform: translate3d(70px, 0, 0);
+          }
+      
+          .theme-switch__input:checked~.theme-switch__label::before {
+            color: lightSlateGray;
+          }
+      
+          .theme-switch__input:checked~.theme-switch__label::after {
+            color: turquoise;
+          }
+        </style>
+        
+        <style>
+          .menu__bar{
+            background-image: url(photo_2024-07-02_02-20-22.jpg);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+         background-position: center top;
+          background-size: 100%;
+          }
+        </style>
+    
+    </style>
+    <style>
+      .menu__bar{
+  background-color: var(--color-black);
+  height: 80px;
+  width: 100%;
+  display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 5%;
+background-color: #6a6a6a00;
+}
+
+.logo {
+  color: var(--color-white);
+  font-size: 30px;
+  display: inline;
+  
+}
+.logo span {
+  color: var(--color-primary);
+  text-align: center;
+}
+.menu-bar ul {
+  list-style: none;
+
+ 
+}
+.menu__bar ul li {
+  padding: 10px 30px;
+  display: flex;
+  display: inline;
+  background-color: #fff;
+}
+
+.menu__bar ul li a{
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.3s;
+  background-color: #fff;
+  
+  
+}
+.hero{
+  height: calc(100vh - 80%px);
+}
+    </style>
+
+
+
+<style>
+    h2{
+        color: rgb(0, 255, 255);
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: x-large;
+    }
+
+    p{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: large;
+    }
+</style>
+
+
+<nav class="menu__bar">
+  <h1 class="logo">Black<span>Web</span></h1>
+
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">abges</a></li>
+    <li><a href="#">Bloout</a></li>
+    <li><a href="#">Pag</a></li>
+    <li><a href="#Contact">Contact</a></li>
+  </ul>
+</nav>
+<div class="page">
+  <!--Theme switch-->
+  <input type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" />
+  <label for="themeSwitch" class="theme-switch__label">
+   
+  </label>
+  
+  <!--Main page content-->
+<main>
+  
+    <div class="wrapper">
+    <h1><Center></Center></h1>
+
+    <title>What is programming</title>
+</head>
+<body>
+    <h2>programming</h2>
+    <p>
+        Programming is a way to teach a computer how to do 
+        with the things we want.
+        
+        For example, if you want your computer to
+        print "something" on the screen, you have to tell him
+        That. Instead of saying "something" with the voice, you should
+        You write codes that resemble graphs of letters. This one
+        The code is called "programming".
+        
+        Then when you write these codes and give them to the computer,
+        The computer reads them and then translates  them into commands that it can
+        Understand. Then, "something" will be printed on the screen.
+    </p>
+    <h2>programming language </h2>
+    <p>
+        An intermediary between you and the computer
+I write what I want in human language and she converts it into machine language
+    </p>
+
+    <h2>code writing</h2>
+    <p>It is the commands and instructions that you started for the computer
+      High to work. Imagine that you communicate with your computer and give it orders to execute but how does this happen while he does not understand our language so for that you must speak in the language of the one who understands it Ok for example if you want a word that blooms on a screen simply you need a code to do this
+      print("sky");
+      you would have printed this word on the screen</p>
+
+
+      <h2>The difference between high languages and languages Low</h2>
+      <p>High-level programming languages and programming languages
+        Low-level used to write programs and give
+        Commands for the computer. But there is a slight difference between them.
+        
+        High-level programming languages
+        
+        They are easy and quick to write languages as they use semi-words
+        From our language. And these languages like for example
+        Python, Java and C Sharp, the programmer leaves detailed tasks
+        for the computer to process them.
+        
+        As for low-level programming languages,
+        
+        They are languages that use more detailed and controlled Acogas.
+        Computer-accurate. It gives the programmer more power
+        On controlling specific parts of the computer
+        Determine how the program will be implemented. These languages are
+        More closely to the computer language itself and used on
+        A lower level of things like memory and processor. Who is it
+        Examples of low-level programming languages are
+        Machine and assembly language.
+        
+        In brief
+        The difference between high-level programming languages and languages
+        Low-level programming lies in the level of
+        Detail and control. High-level programming languages
+        Allows programming quickly and easily while languages
+        Low-level programming provides greater ability to
+        Precise computer control.</p>
+
+       
+</body>
+</html>
+<h4 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">© 2024 black Web</h4>
+
+
